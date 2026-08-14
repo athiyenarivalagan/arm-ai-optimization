@@ -23,7 +23,6 @@ def quantize_model(
 
     # Remove conflicting intermediate shape metadata.
     # This forces ONNX to calculate the shape dynamically instead of checking hardcoded shapes.
-    # (Explain the issue that I faced)
     model.graph.ClearField("value_info")
     
     # Save cleaned model

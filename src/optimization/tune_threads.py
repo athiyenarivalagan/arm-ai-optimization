@@ -35,7 +35,7 @@ def tune_threads(
     model_path,
     tokenizer,
     text,
-    thread_counts=(1, 2, 4, 8),
+    thread_counts=(1, 2, 4),
     inter_threads=1,
     warmup_runs=10,
     benchmark_runs=100,

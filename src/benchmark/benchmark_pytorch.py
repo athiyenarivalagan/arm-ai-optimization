@@ -30,7 +30,7 @@ def benchmark_pytorch(
         max_length=max_length,
     )
 
-    print("Input shape:", inputs["input_ids"].shape) # code for debugging 
+    # print("Input shape:", inputs["input_ids"].shape) # for debugging 
 
     def run_inference():
         with torch.inference_mode():

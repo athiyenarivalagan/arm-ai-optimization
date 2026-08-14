@@ -3,7 +3,9 @@ import pandas as pd
 
 
 # Dataset Path/s
-DATASET_DIR = Path("../data/ChnSentiCorp")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATASET_DIR = PROJECT_ROOT / "data" / "ChnSentiCorp"
+# DATASET_DIR = Path("../data/ChnSentiCorp")
 
 def load_dataset(split: str) -> pd.DataFrame:
     # Dataset Loader

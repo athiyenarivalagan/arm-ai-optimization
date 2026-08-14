@@ -31,7 +31,6 @@ def profile_pytorch(
         max_length=max_length,
     )
 
-    # Warmup (Is it necessary to warn-up before running the profiler?)
     for _ in range(warmup_runs):
         with torch.inference_mode():
             model(**inputs)

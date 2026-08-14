@@ -41,21 +41,18 @@ def benchmark_onnx(
     
     inputs = tokenizer(
         text,
-        # return_tensors="pt",
         return_tensors="np", # ONNX Runtime expects NumPy arrays
         truncation=True,
         padding=True,
         max_length=max_length,
     )
 
-    print("Input shape:", inputs["input_ids"].shape) # code for debugging 
+    # print("Input shape:", inputs["input_ids"].shape) # or debugging 
     
     onnx_inputs = {
         "input_ids": inputs["input_ids"],
         "attention_mask": inputs["attention_mask"],
     }
-    
-    # onnx_logits = session.run(None, onnx_inputs)[0]
 
     # ONNX inference
     def run_inference():
