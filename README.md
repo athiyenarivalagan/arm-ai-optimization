@@ -12,7 +12,7 @@ The final INT8 model reduces average inference latency from **82.34 ms to 21.31 
 
 ## Why This Project Matters
 
-This project demonstrates a practical end-to-end workflow for deploying transformer inference efficiently on Arm server CPUs.
+This project demonstrates a practical end-to-end workflow for deploying transformer inference efficiently on Arm server CPUs by combining model/runtime optimization with hardware-aware tuning.
 
 Rather than evaluating optimization techniques in isolation, the project measures their effect on latency, throughput, model size, and prediction quality on real AWS Graviton3 hardware.
 
@@ -205,9 +205,11 @@ pip install -r requirements.txt
 
 ### 4. Prepare ChnSentiCorp
 
-The ChnSentiCorp dataset is third-party data and is not redistributed in this repository.
+The dataset is third-party data and is not redistributed in this repository. It can be downloaded from the PaddleNLP-hosted distribution:
 
-Obtain the dataset separately and place the files in:
+[Download ChnSentiCorp](https://bj.bcebos.com/paddlenlp/datasets/ChnSentiCorp.zip)
+
+After downloading and extracting the dataset, place the files in:
 
 ```text
 data/ChnSentiCorp/
