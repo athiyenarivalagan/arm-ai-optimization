@@ -153,8 +153,7 @@ arm-ai-optimization/
     │   └── tune_threads.py
     │
     ├── profiling/
-    │   ├── profile_pytorch.py
-    │   └── profile_onnx.py
+    │   └── profile_pytorch.py
     │
     └── utils/
         ├── benchmark_utils.py
